@@ -24,10 +24,17 @@
         --c-cyan: rgb(42,161,152);
         --c-green: rgb(133,153,0);
       }
+
       a:hover {
         color: orange;
       }
-
+      
+      a.Article{
+        color: var(--c-magenta);
+      }
+      a.Article:hover{
+        color: orange;
+      }
 
       a.Aside:hover{
         color: var(--c-blue);
@@ -45,6 +52,7 @@
       
       }
 
+      div {max-width: 800px;}
 
     </style>
 
@@ -52,14 +60,14 @@
 
   <body style="background-color: var(--c-background-color);" >
     <!-- Here is our main header that is used across all the pages of our website -->
-    
+    <div>
     <header style="background-color: var(--c-background-highlights);text-align: center;color: var(--c-yellow); font-size: 150%; ">
       <h1>Header</h1>
     </header>
 
     <nav >
       
-      <ul class="flex-container" style="list-style-type: none;">
+      <ul class="flex-container" style="list-style-type: none;" >
         
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -79,7 +87,7 @@
     <main style="color: var(--base-font-color);">
 
       <!-- It contains an article -->
-      <article>
+      <article class="Article">
         
         <h2>Article heading</h2>
         <div style="border: 3px solid var(--c-cyan)">
@@ -98,12 +106,12 @@
         <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
 
         <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-        <p>Now, what was that? Learn more <a style="color: var(--c-magenta);"  href="https://en.wikipedia.org/wiki/Lorem_ipsum#">through this funny little link.</a></p>
+        <p>Now, what was that? Learn more <a class="Article" href="https://en.wikipedia.org/wiki/Lorem_ipsum#">through this funny little link.</a></p>
         </div>  
       </article>
     
       <!-- the aside content can also be nested within the main content -->
-      <aside  style="color: var(--c-green); a{color: var(--c-red);} " >
+      <aside  style="color: var(--c-green); " >
         
         <h2>Related</h2>
 
@@ -123,6 +131,6 @@
     <footer style="background-color: var(--c-background-highlights);">
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
-
+    </div>
   </body>
 </html>
